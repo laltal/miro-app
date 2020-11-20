@@ -120,7 +120,7 @@ class Root extends Component {
     let { query } = this.state;
     let topics = [];
     this.showLoader();
-    fetch('query.json')
+    fetch(QUERY_JSON)
       .then((response) => {
         if (response.status === 200) {
           return response.json()
