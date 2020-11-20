@@ -32,7 +32,8 @@ class Root extends Component {
     scrollableContainer = document.querySelector('.scrollable-container');
     scrollableContainer.addEventListener('scroll', this.scrollHandler);
 
-    this.bootstrap();
+    // this.bootstrap();
+    miro.onReady(this.bootstrap.bind(this))
   }
   
   search() {
@@ -118,9 +119,8 @@ class Root extends Component {
   loadTopics() {
     let { query } = this.state;
     let topics = [];
-    console.log(topics);
     this.showLoader();
-    fetch('/miro-app/query.json')
+    fetch('query.json')
       .then((response) => {
         if (response.status === 200) {
           return response.json()
@@ -224,6 +224,4 @@ class Root extends Component {
   }
 }
 
-miro.onReady(function () {
-  ReactDOM.render(<Root />, document.getElementById('root'));
-});
+ReactDOM.render(<Root />, document.getElementById('root'));

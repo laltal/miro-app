@@ -1,4 +1,5 @@
 const path = require('path');
+const webpack = require('webpack');
 
 module.exports = {
   mode: 'production',
@@ -34,5 +35,11 @@ module.exports = {
     filename: '[name].js',
     path: path.resolve(__dirname, 'dist'),
     publicPath: '/',
-  }
+  },
+  plugins: [
+    new webpack.DefinePlugin({
+      LIBRARY_URL: process.env.NODE_ENV === "production" ? "'/miro-app/library.html'" : "'../library.html'" ,
+      QUERY_JSON: process.env.NODE_ENV === "production" ? "'/miro-app/query.json'" : "'query.json'" ,
+    })
+  ]
 }
