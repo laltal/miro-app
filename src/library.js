@@ -120,7 +120,7 @@ class Root extends Component {
     let topics = [];
     console.log(topics);
     this.showLoader();
-    fetch('./query.json')
+    fetch('/miro-app/query.json')
       .then((response) => {
         if (response.status === 200) {
           return response.json()
