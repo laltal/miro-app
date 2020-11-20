@@ -1,0 +1,149 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+}
+
+h3 {
+  font-size: 16px;
+  text-align: center;
+  font-weight: normal;
+}
+
+.scrollable-container {
+  height: calc(100% - 75px);
+  overflow: auto;
+  padding: 0 20px 30px 20px;
+  box-sizing: border-box;
+}
+
+.items_container {
+  padding:25px;
+}
+
+.topic {
+  border:1px solid black;
+  background-color: #4262ff;
+  margin:2px;
+  vertical-align: center;
+  display: inline-block;
+  width: 200px;
+  height: 20px;
+  padding: 5px;
+  padding-top:10px;
+  color:white;
+  text-align:center;
+}
+
+.rtb-material-spinner {
+  width: 100%;
+  height: 60px;
+  position: relative;
+  margin-top: 20px;
+}
+
+.rtb-material-spinner-circular {
+  animation: rotate 2s linear infinite;
+  height: 100%;
+  transform-origin: center center;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.rtb-material-spinner-path {
+  stroke-dasharray: 1, 200;
+  stroke-dashoffset: 0;
+  animation: dash 1.5s ease-in-out infinite;
+  stroke-linecap: round;
+  stroke: #2a79ff;
+}
+
+.searchbar {
+  margin-left:auto;
+  margin-right:auto;
+  padding: 10px;
+  width: 100%;
+  max-width: 300px;
+  display: inline-flex;
+  color:white;
+}
+
+.search-input {
+  font-size:16px;
+  flex-grow:1;
+  padding: 10px;
+  outline: none;
+  border: 1px solid #009879;
+  border-radius: 5px 0 0 5px;
+  background:#f4faf9;
+  transition: background 0.25s, box-shadow 0.25s;
+}
+
+.search-input:focus {
+  background: white;
+  box-shadow: 0 0 2px #8cc6ba;
+}
+
+.search-input::placeholder {
+  color: #8cc6ba;
+}
+
+.search-button {
+  background: #009879;
+  color: white;
+  outline:none;
+  border: none;
+  display: flex;
+  align-items:center;
+  justify-content: center;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  user-select: none;
+}
+
+.search-button:active {
+  box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.25);
+}
+
+
+.miro-input-group {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.search-icon {
+  fill:white;
+  margin-top: -15px;
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes dash {
+  0% {
+    stroke-dasharray: 1, 200;
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dasharray: 89, 200;
+    stroke-dashoffset: -35px;
+  }
+  100% {
+    stroke-dasharray: 89, 200;
+    stroke-dashoffset: -124px;
+  }
+}
