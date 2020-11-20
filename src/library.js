@@ -120,7 +120,7 @@ class Root extends Component {
     let topics = [];
     console.log(topics);
     this.showLoader();
-    fetch('https://81c7611f4674.ngrok.io/query.json')
+    fetch('./query.json')
       .then((response) => {
         if (response.status === 200) {
           return response.json()

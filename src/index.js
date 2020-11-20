@@ -14,7 +14,7 @@ miro.onReady(function () {
         librarySvgIcon:
           '<path fill="#000" fill-rule="nonzero" d="M26.218 24.389l4 4.048-2.254 2.34-4-4.048-4 4.048-2.255-2.34 4-4.048-4-4.049L19.964 18l4 4.049 4-4.049 2.254 2.34-4 4.049zm-13.782 0c0 3.528-2.8 6.351-6.218 6.351C2.764 30.74 0 27.88 0 24.389c0-3.529 2.8-6.352 6.218-6.352s6.218 2.823 6.218 6.352zm35.491 6.351H35.455V18h12.472v12.74z"/>',
         onClick: function () {
-          miro.board.ui.openLibrary('../library.html', {title: 'laltal'})
+          miro.board.ui.openLibrary('./library.html', {title: 'laltal'})
         },
       },
     },
